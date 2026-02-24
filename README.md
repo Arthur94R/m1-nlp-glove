@@ -75,20 +75,14 @@ python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt')"
 
 ### Lancement
 
-**Étape 1 : Word2Vec (si pas déjà fait au TP1)**
-```bash
-python src/main.py
-# Génère : word2vec_films.bin
-```
-
-**Étape 2 : GloVe**
+**Étape 1 : GloVe**
 ```bash
 python src/glove_films.py
 # Durée : ~5-10 minutes
 # Génère : glove_embeddings_films.npy, glove_vocab_films.npy
 ```
 
-**Étape 3 : Comparaison**
+**Étape 2 : Comparaison**
 ```bash
 python src/compare_embeddings.py
 # Génère les graphiques de comparaison
