@@ -138,7 +138,7 @@ axes[1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig(os.path.join(RESULTS_DIR, 'w2v_vs_glove_comparison.png'), dpi=300, bbox_inches='tight')
 plt.close()
-print("   ✓ Graphique sauvegardé : results/w2v_vs_glove_comparison.png\n")
+print("   Graphique sauvegardé : results/w2v_vs_glove_comparison.png\n")
 
 # ===========================
 # 5. DISTANCE ENTRE EMBEDDINGS
@@ -182,7 +182,7 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig(os.path.join(RESULTS_DIR, 'similarity_correlation.png'), dpi=300, bbox_inches='tight')
 plt.close()
-print("   ✓ Graphique corrélation sauvegardé : results/similarity_correlation.png\n")
+print("   Graphique corrélation sauvegardé : results/similarity_correlation.png\n")
 
 # ===========================
 # 6. RÉSUMÉ

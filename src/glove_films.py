@@ -123,7 +123,7 @@ for epoch in range(30):
     if (epoch + 1) % 10 == 0:
         print(f"   Epoch {epoch+1}/30 - Loss: {epoch_loss:.4f}")
 
-print(f"\n   ✓ Entraîné\n")
+print(f"\n   Entraîné\n")
 
 # ===========================
 # 4. MOTS SIMILAIRES
@@ -175,14 +175,14 @@ plt.tight_layout()
 plt.savefig(os.path.join(RESULTS_DIR, 'glove_tsne.png'), dpi=300)
 plt.close()
 
-print("   ✓ Graphique sauvegardé\n")
+print("   Graphique sauvegardé\n")
 
 # ===========================
 # 6. SAUVEGARDE
 # ===========================
 np.save(os.path.join(DATA_DIR, 'glove_embeddings_films.npy'), center_vec.numpy())
 np.save(os.path.join(DATA_DIR, 'glove_vocab_films.npy'), vocab)
-print("   ✓ Embeddings sauvegardés\n")
+print("   Embeddings sauvegardés\n")
 
 print("="*60)
 print("TERMINÉ")

@@ -1,3 +1,5 @@
+Projet GitHub : https://github.com/Arthur94R/m1-nlp-word2vec
+
 # 🎬 TP2 — Construction embeddings avec GloVe & comparaison avec Word2Vec (TP1)
 
 Projet universitaire — Master 1 IA & Big Data, Université Paris 8
@@ -46,7 +48,6 @@ TP2_Word2Vec_vs_GloVe/
 │   ├── glove_embeddings_films.npy       → Vecteurs GloVe
 │   └── glove_vocab_films.npy            → Vocabulaire GloVe
 ├── src/
-│   ├── main.py                          → Word2Vec (TP1)
 │   ├── glove_films.py                   → Entraînement GloVe
 │   └── compare_embeddings.py            → Comparaison W2V vs GloVe
 └── results/
@@ -96,14 +97,18 @@ python src/compare_embeddings.py
 
 ```
 Word2Vec :
-  romance         : 0.735
-  affection       : 0.741
-  madly           : 0.730
+  madly           : 0.675
+  headoverheels   : 0.647
+  nandini         : 0.639
+  blossom         : 0.631
+  alraune         : 0.629
 
 GloVe :
-  romance         : 0.820
-  passion         : 0.798
-  heart           : 0.765
+  finds           : 0.995
+  find            : 0.995
+  family          : 0.994
+  world           : 0.993
+  must            : 0.991
 ```
 
 **Observation :** Certains voisins sont communs, d'autres diffèrent.
@@ -120,7 +125,7 @@ Deux graphiques côte à côte montrant l'organisation des mots dans chaque espa
 ### 3. Corrélation
 
 ```
-Corrélation W2V vs GloVe : 0.72
+Corrélation W2V vs GloVe : 0.334
 ```
 
 **Interprétation :**
@@ -154,52 +159,3 @@ Co-occurrence (window=5) :
 
 ### t-SNE (t-Distributed Stochastic Neighbor Embedding)
 Réduit les dimensions (100D → 2D) en préservant les distances relatives pour visualisation.
-
-## 📈 Analyse comparative
-
-### Points communs
-- Les deux capturent la similarité sémantique
-- Mots similaires ont des vecteurs proches
-- Corrélation généralement > 0.6
-
-### Différences
-- **Word2Vec** : Meilleur sur le contexte immédiat et syntaxe
-- **GloVe** : Meilleur sur les relations sémantiques globales et analogies
-- **W2V** : Plus rapide à entraîner
-- **GloVe** : Plus stable (déterministe)
-
-## 📝 Livrables
-
-- ✅ Code source (Word2Vec, GloVe, comparaison)
-- ✅ Embeddings entraînés
-- ✅ Visualisations comparatives
-- ✅ Analyse des corrélations
-- ✅ README
-
-## 🔗 Lien avec TP1
-
-Ce TP2 étend le TP1 en :
-- Ajoutant une deuxième méthode d'embeddings (GloVe)
-- Comparant systématiquement les résultats
-- Analysant les forces/faiblesses de chaque approche
-
-## 📚 Références
-
-- **Word2Vec** : Mikolov et al. (2013) - "Efficient Estimation of Word Representations in Vector Space"
-- **GloVe** : Pennington et al. (2014) - "GloVe: Global Vectors for Word Representation"
-- **t-SNE** : van der Maaten & Hinton (2008) - "Visualizing Data using t-SNE"
-
-## 💡 Observations typiques
-
-**Corrélation élevée (r > 0.7) :**
-- Les deux modèles capturent des informations similaires
-- Différences subtiles dans l'organisation de l'espace
-
-**Corrélation moyenne (r ~ 0.5) :**
-- Approches complémentaires
-- GloVe capture mieux certaines relations globales
-- W2V capture mieux le contexte local
-
-**Cas d'usage :**
-- **Word2Vec** : Classification de texte, analyse de sentiment
-- **GloVe** : Analogies, relations sémantiques complexes
